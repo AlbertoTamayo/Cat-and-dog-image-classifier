@@ -18,4 +18,8 @@ The next cell compiles the model with a binary crossentropy loss function, a roo
 
 Cell #8 fits the model's parameters with the training and validation sets, the number of epochs and the steps per epoch to be taken while training. It's also important to point out that the steps for epoch should allow for the whole datasets to feed their data based on batch size and the total size of the training and validation data sizes.
 
-Cell
+Cell #9 displays 2 different plots of the evolution of the training and validation data's accuracy and loss evolving with each epoch of training.
+
+The following 2 cells predicts the classes of the test data and calls the PlotImages() function from cell #4 to display the confidence values of all 50 samples of the test data based on the model
+
+Cell #11 is the final check to see if the model accurately predicts at least 63% of the test images correctly as displayed in the challenge by FCC. I'd also like to point out that it took several tries to create a model that could achieve a level of this accuracy, and the main changes to try and optimize the model were in cells #5 (changing some image data transformations), #7 with the type of activation functions for each layer in the model and  #8 with the optimizer function for the back propagation (mainly switching from the Adam optimizer to RMSprop). With these settings, the final model so far leads to 72% accuracy on the test data fed to the model, though with more tuning, the model would most likely be even more accurate.
